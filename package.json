@@ -1,16 +1,20 @@
 {
-  "name": "new_todo",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vitest run --environment jsdom"
+    "test:unit": "vitest run --environment jsdom",
+    "test:cdc": "mocha tests/cdc/cdc.spec.js",
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
   "dependencies": {
+    "@pact-foundation/pact": "^10.1.4",
     "axios": "^1.1.2",
     "core-js": "^3.6.5",
     "flush-promises": "^1.0.2",
+    "mocha": "^10.0.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -20,6 +24,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "axios-mock-adapter": "^1.21.2",
+    "node": "^18.10.0",
     "typescript": "~3.9.3",
     "vitest": "^0.24.0",
     "vue-jest": "^5.0.0-0"

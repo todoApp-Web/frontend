@@ -1,24 +1,15 @@
-# new_todo
+# Todo App Frontend 
 
-## Project setup
-```
-npm install
-```
+## Technologies
+- VueJS
+- Axios
+- Pact
+- axios-mock-adapter
+- Mocha
+- Jest
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Setup and Usage
+- Run `npm install` for package installations.
+- Run `npm run test:unit` for unit tests.
+- Run `npm run test:cdc` for unit tests.
+- Run `npm run serve` for serve the client to http://localhost:8080
